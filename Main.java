@@ -12,6 +12,7 @@ public class Main {
     list.add("The");
     list.add("Win");
     list.add(0, "Wooooooooo!");
+    list.removeRange(0,1);
     
     for(int i=0; i < list.size(); i++) 
     {
