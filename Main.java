@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.ArrayList;
   
 public class Main {
   
@@ -12,13 +12,31 @@ public class Main {
     list.add("The");
     list.add("Win");
     list.add(0, "Wooooooooo!");
-    list.removeRange(0,1);
+    list.remove(1);
     
     for(int i=0; i < list.size(); i++) 
     {
-      System.out.println(list.get(i));
+      System.out.print(list.get(i) + " ");
     }
     
+    System.out.println();
+    System.out.println("-----------------------------");
     
-  }
+    list.set(0, "Array");
+    list.set(2, "Are");
+    list.set(4, "Best");
+    
+    for(String item: list) {
+      System.out.print(item + " ");
+    }
+    
+    System.out.println();
+    System.out.println("-----------------------------");
+    list.remove(2);
+    list.remove(3);
+    list.remove(2);
+    
+    System.out.println(list);
+    
+    }
 }
