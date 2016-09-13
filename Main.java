@@ -1,10 +1,12 @@
-import java.util.ArrayList;
+import java.util.*;
   
 public class Main {
   
   public static void main(String[] args){
     
-    ArrayList<String> list = new ArrayList<String>();
+    List<String> list = new ArrayList<String>();
+    
+    ListIterator iterate = list.listIterator();
     
     list.add("Array");
     list.add("Lists");
@@ -34,7 +36,11 @@ public class Main {
     System.out.println("-----------------------------");
     list.remove(2);
     list.remove(3);
-    list.remove(2);
+    
+    while(iterate.hasNext()) {
+      iterate.next();
+    }
+    iterate.remove();
     
     System.out.println(list);
     
